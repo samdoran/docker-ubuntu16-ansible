@@ -6,7 +6,7 @@ RUN apt-get update \
 RUN apt-add-repository ppa:ansible/ansible \
     && apt-get update \
     && apt-get upgrade -y --no-install-recommends \
-    && apt-get install -y ansible \
+    && apt-get install -y ansible cron \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
