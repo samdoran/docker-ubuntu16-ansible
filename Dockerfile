@@ -11,4 +11,4 @@ RUN apt-add-repository ppa:ansible/ansible \
     && apt-get clean
 
 # Install Ansible inventory file.
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+RUN echo '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
