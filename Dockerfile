@@ -12,3 +12,5 @@ RUN apt-add-repository ppa:ansible/ansible \
 
 # Install Ansible inventory file.
 RUN echo '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+
+CMD ["/bin/systemd"]
