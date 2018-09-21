@@ -1,7 +1,6 @@
 FROM ubuntu:16.04
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        python-software-properties \
         software-properties-common \
         systemd systemd-cron sudo curl \
     && rm -rf /var/lib/apt/lists/* \
