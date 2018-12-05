@@ -1,11 +1,16 @@
 FROM ubuntu:16.04
+
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+        bash \
+        sudo \
+        ca-certificates \
         software-properties-common \
         systemd systemd-cron sudo curl \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
+
 RUN apt-add-repository ppa:ansible/ansible \
     && apt-get update \
     && apt-get upgrade -y --no-install-recommends \
