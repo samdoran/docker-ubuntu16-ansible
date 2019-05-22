@@ -1,4 +1,5 @@
 FROM ubuntu:16.04
+ENV container=docker
 
 ENV CONTAINER=docker
 ENV DEBIAN_FRONTEND=noninteractive
