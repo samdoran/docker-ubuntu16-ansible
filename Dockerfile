@@ -10,6 +10,7 @@ RUN apt-get update \
         aptitude \
         bash \
         ca-certificates \
+        iproute2 \
         python-apt \
         python-pip \
         software-properties-common \
