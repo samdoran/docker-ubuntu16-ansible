@@ -10,6 +10,7 @@ RUN apt-get update \
         aptitude \
         bash \
         curl \
+        dbus \
         gcc \
         ca-certificates \
         iproute2 \
