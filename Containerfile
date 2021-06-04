@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM quay.io/bedrock/ubuntu:16.04
 ENV container=docker
 
 ENV CONTAINER=docker
@@ -15,11 +15,11 @@ RUN apt-get update \
         ca-certificates \
         iproute2 \
         libyaml-dev \
-        python-apt \
-        python-dev \
-        python-pip \
-        python-setuptools \
-        python-wheel \
+        python3-apt \
+        python3-dev \
+        python3-pip \
+        python3-setuptools \
+        python3-wheel \
         software-properties-common \
         sudo \
         systemd \
@@ -28,7 +28,7 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
-RUN pip install ansible q
+RUN pip3 install ansible-core q
 
 RUN mkdir -p /etc/ansible \
     && echo '[local]\nlocalhost ansible_connection=local ansible_python_interpreter=/usr/bin/python3' > /etc/ansible/hosts
